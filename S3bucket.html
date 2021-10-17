@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
+</head>
+<body>
+    
+  
+<script type="text/javascript">
+
+const ENDPOINT_URL = "https://s3.pilw.io"
+const ACCESS_KEY_ID = "AKIAQSXIEEDS3L5GA7M6"
+const ACCESS_KEY_SECRET = "EFowuw/ZOpf/TnYV4Za7/Xjkq6HqszxkNIq9op5n8"
+const BUCKET_NAME = "testwebb"
+
+var bucket = new AWS.S3({
+    accessKeyId: ACCESS_KEY_ID,
+    secretAccessKey: ACCESS_KEY_SECRET,
+    endpoint: new AWS.Endpoint(ENDPOINT_URL),
+    params: {
+        Bucket: BUCKET_NAME
+    }
+})
