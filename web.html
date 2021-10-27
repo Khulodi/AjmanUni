@@ -68,6 +68,14 @@
   <input type="text" id="fname" name="fname"><br><br>
   <label for="lname">Last name:</label>
   <input type="text" id="lname" name="lname"><br><br>
+  <label for="language">Translate to:</label>
+  <select name="language" id="language">
+    <option value="es">Spanish</option>
+    <option value="fr">French</option>
+    <option value="ar">Arabic</option>
+    <option value="ta">Tamil</option>
+    <option value="hi">Hindi</option>
+  </select><br><br>
   <button type="button" onclick="printName()">Submit</button>
 </form>
 <br>
@@ -103,9 +111,9 @@
         <div>Beard: <span id="beard"></span></div>
         <div>Mustache: <span id="Mustache"></span></div>
         <div>Glasses: <span id="Glasses"></span></div>
+        <div>Lower Age Range: <span id="lower-age-range"></span></div>
+        <div>Higher Age Range: <span id="higher-age-range"></span></div>
       
-      
-       <p id="opResult"></p>
     </div>
  
 </body>
