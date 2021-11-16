@@ -1,86 +1,67 @@
 <!doctype html>
-
 <html>
-
-
-
-
 <head>
-    <style>
-    /* CSS comes here */
-    #video {
-        border: 1px solid black;
-        width: 320px;
-        height: 240px;
-    }
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    #photo {
-        border: 1px solid black;
-        width: 320px;
-        height: 240px;
-    }
-
-    #canvas {
-        display: none;
-    }
-
-    .camera {
-        width: 340px;
-        display: inline-block;
-    }
-
-    .output {
-        width: 340px;
-        display: inline-block;
-    }
-
-    #startbutton {
-        display: block;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        bottom: 36px;
-        padding: 5px;
-        background-color: #6a67ce;
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        font-size: 14px;
-        color: rgba(255, 255, 255, 1.0);
-        cursor: pointer;
-    }
-
-    .contentarea {
-        font-size: 16px;
-        font-family: Arial;
-        text-align: center;
-    }
-    </style>
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Hello, world!</title>
 </head>
 
 <body>
   
-    <div class="contentarea">
+    <div class="container">
           <h2>
-        Hello there, please enter your name: 
-        </h2>
-    <form id="nameForm">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <label for="language">Translate to:</label>
-  <select name="language" id="language">
-    <option value="es">Spanish</option>
-    <option value="fr">French</option>
-    <option value="ar">Arabic</option>
-    <option value="ta">Tamil</option>
-    <option value="hi">Hindi</option>
-  </select><br><br>
-  <button type="button" onclick="printName()">Submit</button>
-</form>
+Cloud Web App        </h2>
+        <form>
+            <div class="mb-3">
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="fname" aria-describedby="emailHelp">
+                <div id="info" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="lname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lname">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <label for="language">Translate to:</label>
+            <select name="language" id="language">
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="ar">Arabic</option>
+                <option value="ta">Tamil</option>
+                <option value="hi">Hindi</option>
+            </select><br><br>
+            <button type="button" class="btn btn-primary" onclick="printName()">Submit</button>
+        </form>
+
+<!--        <form id="nameForm">-->
+<!--        <div class="form-group" >-->
+
+<!--        <label for="fname" class="col-sm-2 col-form-label">First name:</label>-->
+<!--            <div class="col-sm-10">-->
+
+<!--            <input type="text" id="fname" name="fname" class="form-control">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="form-group row" >-->
+
+<!--            <label for="lname" class="col-sm-2 col-form-label">Last name:</label>-->
+<!--            <div class="col-sm-10">-->
+
+<!--                <input type="text" id="lname" name="lname" class="form-control-plaintext">-->
+<!--            </div>-->
+<!--        </div>-->
+
+
 <br>
 <div id="textToSynth">
-    <input autofocus size="40" type="text" id="textEntry" value="It's very good to meet you."/>
+    <input autofocus size="40" type="text" id="textEntry" value="It's very good to meet you." readonly/>
     <!-- <button class="btn default" onClick="translateAndSpeak()">Synthesize</button> -->
     <p id="result">Translation not ready yet!</p>
   </div>
@@ -105,19 +86,60 @@
         </div>
            
         <H1>Face Analysis</H1>
-        <div>Emotion: <span id="emotion"></span></div>
+        <!-- <div>Emotion: </div>
         <div>Gender: <span id="gender"></span></div>
         <div>Smile: <span id="smile"></span></div>
         <div>Beard: <span id="beard"></span></div>
         <div>Mustache: <span id="Mustache"></span></div>
         <div>Glasses: <span id="Glasses"></span></div>
         <div>Lower Age Range: <span id="lower-age-range"></span></div>
-        <div>Higher Age Range: <span id="higher-age-range"></span></div>
+        <div>Higher Age Range: <span id="higher-age-range"></span></div> -->
+        
+        <table class="table">
+            <tr>
+              <th>Feature</th>
+              <th>Result</th>
+            </tr>
+            <tr>
+              <td>Emotion</td>
+              <td><span id="emotion"></span></td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td><span id="gender"></span</td>
+            </tr>
+            <tr>
+              <td>Smile</td>
+              <td><span id="smile"></span></td>
+            </tr>
+            <tr>
+              <td>Beard</td>
+              <td><span id="beard"></span></td>
+            </tr>
+            <tr>
+              <td>Mustache</td>
+              <td><span id="Mustache"></span></td>
+            </tr>
+            <tr>
+              <td>Glasses</td>
+              <td><span id="Glasses"></span></td>
+            </tr>
+            <tr>
+                <td>Lower Age Range</td>
+                <td><span id="lower-age-range"></span></td>
+              </tr>
+              <tr>
+                <td>Higher Age Range</td>
+                <td><span id="higher-age-range"></span></td>
+              </tr>
+          </table>
       
     </div>
  
 </body>
+
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.410.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <script src="apis.js"></script>
 </html>
