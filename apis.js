@@ -1,6 +1,6 @@
 let cred = {
-    awsAccessKeyId: "AKIA2XEP257PIRW6Q3AQ",
-    awsSecretAccessKey: "S8OpKSNdaoF8kcklqNiVbFlQVRTd/AHhH1/nzaE1"
+    awsAccessKeyId: "fake",
+    awsSecretAccessKey: "fake"
 };
   // Initialize the Amazon Cognito credentials provider
   AWS.config.region = 'us-east-2';
