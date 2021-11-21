@@ -1,10 +1,10 @@
 let cred = {
-    awsAccessKeyId: "fake",
-    awsSecretAccessKey: "fake"
+    awsAccessKeyId: "QUtJQTJYRVAyNTdQRFJGQ0lRSDQ=",
+    awsSecretAccessKey: "RTFkeWVWdk1sRmZOSjRFREd3VDhRUitZZS85cFdGd2dWeFpCVDhmaA=="
 };
   // Initialize the Amazon Cognito credentials provider
   AWS.config.region = 'us-east-2';
-  AWS.config.credentials = new AWS.Credentials(cred.awsAccessKeyId, cred.awsSecretAccessKey);
+  AWS.config.credentials = new AWS.Credentials(atob(cred.awsAccessKeyId), atob(cred.awsSecretAccessKey));
 function printName(){
     let form = document.getElementById("nameForm")
    let firstName = form.fname.value;
