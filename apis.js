@@ -131,7 +131,6 @@ function printName(){
             document.getElementById("smile").innerHTML = data.FaceDetails[0].Smile.Value;
             document.getElementById("beard").innerHTML = data.FaceDetails[0].Beard.Value;
             document.getElementById("Mustache").innerHTML = data.FaceDetails[0].Mustache.Value;
-            document.getElementById("Glasses").innerHTML = data.FaceDetails[0].Eyeglasses.Value;
             document.getElementById("lower-age-range").innerHTML = data.FaceDetails[0].AgeRange.Low;
             document.getElementById("higher-age-range").innerHTML = data.FaceDetails[0].AgeRange.High;
 
@@ -140,9 +139,6 @@ function printName(){
       }
       //Loads selected image and unencodes image bytes for Rekognition DetectFaces API
       function ProcessImage() {
-        AnonLog();
-
-    
         // Load base64 encoded image 
 
             // var img = document.createElement('img');
@@ -176,22 +172,6 @@ function printName(){
             DetectFaces(imageBytes);
           };
  
-      //Provides anonymous log on to AWS services
-      function AnonLog() {
-        
-        // Configure the credentials provider to use your identity pool
-    
- 
-        // Make the call to obtain credentials
-        AWS.config.credentials.get(function () {
-          // Credentials will be available when this function is called.
-          var accessKeyId = AWS.config.credentials.accessKeyId;
-          var secretAccessKey = AWS.config.credentials.secretAccessKey;
-          var sessionToken = AWS.config.credentials.sessionToken;
-        });
-      }
-
-
         // Function invoked by button click
         // function speakText() {
         //   speakParticularText(document.getElementById("textEntry").value)
