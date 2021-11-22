@@ -1,0 +1,3 @@
+### Part 4
+Part 4 involves taking an image of your face via your webcam and analysing the facial characteristics and emotions for the same via an HTML table.
+Your task is to add another attribute to the table that says whether the individual in the image is wearing glasses or not. Refer to the existing javascript code in apis.js and the AWS documentation of the Rekognition API to identify how to obtain the glasses attribute. [https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html].
